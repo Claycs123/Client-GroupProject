@@ -9,7 +9,87 @@
     <title>Home Page</title>
 </head>
 <body>
-    <header>
+    <!-- <header>
+      <h1>Appointment Scheduler</h1> -->
+      <style>
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 115vh;
+          margin: 0;
+          padding: 0; 
+        }
+        /* header {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 24px;
+      } */
+        form {
+        text-align: right;
+      }
+      form label {
+        display: inline-block;
+        text-align: left;
+        width: 120px;
+      }
+      form input, form textarea {
+        display: inline-block;
+        width: 250px;
+        margin-bottom: 10px;
+      }
+      .instructions {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 18px;
+      }
+      </style>
+      <form>
+        <div class="instructions">
+          <p>Schedule Appointment Below:</p>
+        </div>
+        <label class="form-label" for="name">Name:</label>
+          <input class="form-input" type="text" id="name" name="name" required><br><br>
+
+          <label class="form-label" for="email">Email:</label>
+          <input class="form-input" type="email" id="email" name="email" required><br><br>
+
+          <label class="form-label" for="phone">Phone Number:</label>
+          <input class="form-input" type="tel" id="phone" name="phone" required><br><br>
+
+          <label class="form-label" for="address">Address:</label>
+          <input class="form-input" type="text" id="address" name="address" required><br><br>
+
+          <label class="form-label" for="medical">Medical Info:</label>
+          <input class="form-input" type="text" id="medical" name="medical" required><br><br>
+
+          <label class="form-label" for="day">Day:</label>
+          <input class="form-input" type="text" id="day" name="day" required><br><br>
+
+          <label class="form-label" for="time">Time Slot:</label>
+          <input class="form-input" type="text" id="time" name="time" required><br><br>
+
+          <!-- <label class="form-label" for="medical">Medical Info:</label>
+          <textarea class="form-input" id="medical" name="medical" rows="1" cols="50"></textarea><br><br> -->
+
+          <label class="form-label" for="service">Service Name:</label>
+          <select class="form-input" id="service" name="service">
+            <option value="stretching">Stretching</option>
+            <option value="rehab">Rehab</option>
+            <option value="doctor">Doctor</option>
+            <option value="injury">Injury</option>
+          </select><br><br>
+
+          <label class="form-label" for="therapist">Therapist Name:</label>
+          <select class="form-input" id="therapist" name="therapist">
+            <option value="McLean">McLean</option>
+            <option value="Clay">Clay</option>
+            <option value="Quentin">Quentin</option>
+            <option value="Austin">Austin</option>
+          </select><br><br>
+
+          <input type="submit" value="Submit">
+    </form>
         
         <!--------------------------- Nav bar --------------------------->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">

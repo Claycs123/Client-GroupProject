@@ -1,0 +1,17 @@
+/* header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: top;
+    width: 100%;
+    padding: 20px;
+  } */
+
+  .form-label {
+    display: inline-block;
+    width: 120px;
+  }
+  
+  .form-input {
+    display: inline-block;
+    width: 200px;
+  }
