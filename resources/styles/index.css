@@ -15,3 +15,11 @@
     display: inline-block;
     width: 200px;
   }
+
+  .top-right-textbox {
+    position: absolute;
+    right: 8%;
+    text-align: center;
+    top: 15%;
+
+}
