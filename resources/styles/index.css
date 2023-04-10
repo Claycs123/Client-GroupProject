@@ -33,6 +33,7 @@
   padding: 20px;
   width: 200px;
   height: 470px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .card-img-top{
@@ -42,3 +43,8 @@
 .list-group {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+.navbar {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
