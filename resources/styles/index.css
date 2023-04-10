@@ -23,6 +23,22 @@
     top: 15%;
 
 }
-.service-card {
+.col-md-3 {
   padding-top: 100px;
+}
+
+
+.service-card {
+  border-radius: 25px;
+  padding: 20px;
+  width: 200px;
+  height: 470px;
+}
+
+.card-img-top{
+  border-radius: 25px;
+}
+
+.list-group {
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
