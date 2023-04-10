@@ -54,4 +54,9 @@
 
 #about-section {
   font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
 }
+#about-image {
+  margin-bottom: 75px;
+}
+
