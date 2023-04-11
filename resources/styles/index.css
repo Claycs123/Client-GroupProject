@@ -79,3 +79,17 @@
   body {
     background-color: #FBFAF9;
   }
+
+  #top-photo {
+  z-index: 3;
+  }
+
+  #bottom-photo {
+    z-index: 2;
+  }
+
+  #logo-video {
+    z-index: 1;
+  }
+
+
