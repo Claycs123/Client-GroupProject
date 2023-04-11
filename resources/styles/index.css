@@ -21,7 +21,7 @@
     right: 8%;
     text-align: center;
     top: 15%;
-
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .col-md-3 {
   padding-top: 100px;
@@ -48,9 +48,6 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.top-right-textbox {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
 
 #about-section {
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -69,4 +66,16 @@
     border-radius: 5px;
     text-decoration: none;
     font-size: 18px;
+  }
+
+  .col-md-3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .ms-2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  body {
+    background-color: #FBFAF9;
   }
