@@ -11,3 +11,9 @@ form1.addEventListener("submit", function (event){
         alert("Invalid Information")
     }
 })
+
+
+//this function auto-fills the service name/ therapist name if knee service is selected on the schedule page
+function KneeServiceSelect() {
+}
+  
