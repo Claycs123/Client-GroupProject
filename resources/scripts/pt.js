@@ -1,5 +1,5 @@
 // Patient Tracking JavaScript
-const patientUrl = "https://localhost:7060/api/Patients/5"
+const patientUrl = "https://localhost:7060/api/Patients"
 let apps = document.getElementById("apps")
 function handlePTLoad()
 {
@@ -38,10 +38,10 @@ function addRow(patient) {
   
         tr.appendChild(td3);
   
-          let td4 = document.createElement("TD");
-          td4.width = 100;
-          td4.appendChild(document.createTextNode(`${patient.phoneNumber}`));
-          tr.appendChild(td4);
+        let td4 = document.createElement("TD");
+        td4.width = 100;
+        td4.appendChild(document.createTextNode(`${patient.phoneNumber}`));
+        tr.appendChild(td4);
   
         let td5 = document.createElement("TD");
         td5.width = 200;
@@ -76,6 +76,7 @@ function addRow(patient) {
     let patients = await getPatientData() || [];
     let table = document.createElement("TABLE");
     table.border = "1";
+    console.log("hello")
     table.id = "patientTable";
     let tableBody = document.createElement("TBODY");
     tableBody.id = "patientTableBody";
@@ -101,12 +102,12 @@ function addRow(patient) {
   
       let th4 = document.createElement("TH");
       th4.width = 200;
-      th4.appendChild(document.createTextNode("PhoneNumber"));
+      th4.appendChild(document.createTextNode("Phone Number"));
       tr.appendChild(th4);
   
     let th5 = document.createElement("TH");
     th5.width = 200;
-    th5.appendChild(document.createTextNode("MedicalInfo"));
+    th5.appendChild(document.createTextNode("Medical Info"));
     tr.appendChild(th5);
 
     let th6 = document.createElement("TH");
@@ -115,7 +116,7 @@ function addRow(patient) {
     tr.appendChild(th6);
   
     patients.forEach((patient) => {
-      if (!song.deleted) {
+       
         let tr = document.createElement("TR");
         tableBody.appendChild(tr);
   
@@ -130,15 +131,15 @@ function addRow(patient) {
         tr.appendChild(td2);
   
         let td3 = document.createElement("TD");
-        td3.width = 50;
+        td3.width = 200;
         td3.appendChild(document.createTextNode(`${patient.name}`));
   
         tr.appendChild(td3);
   
-          let td4 = document.createElement("TD");
-          td4.width = 100;
-          td4.appendChild(document.createTextNode(`${patient.phoneNumber}`));
-          tr.appendChild(td4);
+        let td4 = document.createElement("TD");
+        td4.width = 100;
+        td4.appendChild(document.createTextNode(`${patient.phoneNumber}`));
+        tr.appendChild(td4);
   
         let td5 = document.createElement("TD");
         td5.width = 200;
@@ -170,7 +171,8 @@ function addRow(patient) {
         
       }
 
-    });
-  
-    apps.appendChild(table);
+    );
+    console.log(table);
+    document.getElementById("apps").appendChild(table);
+    console.log(patients)
   }
