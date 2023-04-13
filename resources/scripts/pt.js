@@ -86,17 +86,17 @@ function addRow(patient) {
     tableBody.appendChild(tr);
   
     let th1 = document.createElement("TH");
-    th1.width = 200;
+    th1.width = 100;
     th1.appendChild(document.createTextNode("PatientID"));
     tr.appendChild(th1);
   
     let th2 = document.createElement("TH");
-    th2.width = 100;
+    th2.width = 200;
     th2.appendChild(document.createTextNode("Email"));
     tr.appendChild(th2);
   
     let th3 = document.createElement("TH");
-    th3.width = 50;
+    th3.width = 100;
     th3.appendChild(document.createTextNode("Name"));
     tr.appendChild(th3);
   
@@ -121,17 +121,17 @@ function addRow(patient) {
         tableBody.appendChild(tr);
   
         let td1 = document.createElement("TD");
-        td1.width = 200;
+        td1.width = 100;
         td1.appendChild(document.createTextNode(`${patient.patientID}`));
         tr.appendChild(td1);
   
         let td2 = document.createElement("TD");
-        td2.width = 100;
+        td2.width = 200;
         td2.appendChild(document.createTextNode(`${patient.email}`));
         tr.appendChild(td2);
   
         let td3 = document.createElement("TD");
-        td3.width = 200;
+        td3.width = 100;
         td3.appendChild(document.createTextNode(`${patient.name}`));
   
         tr.appendChild(td3);
