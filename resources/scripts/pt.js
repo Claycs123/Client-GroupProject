@@ -176,3 +176,29 @@ function addRow(patient) {
     document.getElementById("apps").appendChild(table);
     console.log(patients)
   }
+
+  function handleAddPatient()
+  {
+    let patiEmail = document.getElementById("email").value
+    let patiName = document.getElementById("name").value
+    let patiPhone = document.getElementById("phone").value
+    let patiAddress = document.getElementById("address").value
+    let patiMedical = document.getElementById("medical").value
+    const newAppointment =
+    {
+        email: patiEmail,
+        name: patiName,
+        phoneNumber: patiPhone,
+        address: patiAddress,
+        medicalInfo: patiMedical
+    }
+    var response = fetch(patientUrl, {
+        method: "POST",
+        body: JSON.stringify(newAppointment),
+        headers: {
+        "Content-type": "application/json; charset=UTF-8"  
+        },
+    })
+    setTimeout(()=> addRow(response.json),2000)
+    location.reload()
+  }
