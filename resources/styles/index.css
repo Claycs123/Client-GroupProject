@@ -29,6 +29,7 @@
 
 
 .service-card {
+  box-shadow: 10px 10px 10px 5px grey;
   border-radius: 25px;
   padding: 20px;
   width: 200px;
@@ -45,6 +46,7 @@
 }
 
 .navbar {
+  box-shadow: 0px 10px 10px darkgrey;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -97,6 +99,10 @@
     align-items: center;
     height: 50px;
     padding: 0 20px;
+  }
+
+  .list-group-item{
+  background-color: #FBFAF9;
   }
   
 
