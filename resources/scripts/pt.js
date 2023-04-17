@@ -34,7 +34,7 @@ function addRow(patient) {
         tr.appendChild(td2);
   
         let td3 = document.createElement("TD");
-        td3.width = 50;
+        td3.width = 150;
         td3.appendChild(document.createTextNode(`${patient.name}`));
   
         tr.appendChild(td3);
@@ -132,7 +132,7 @@ function addRow(patient) {
         tr.appendChild(td2);
   
         let td3 = document.createElement("TD");
-        td3.width = 100;
+        td3.width = 150;
         td3.appendChild(document.createTextNode(`${patient.name}`));
   
         tr.appendChild(td3);
