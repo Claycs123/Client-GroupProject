@@ -1,5 +1,5 @@
 // Appointment Table Javascript
-var appointmentUrl = "https://localhost:7060/api/Appointments"
+const appointmentUrls = "https://localhost:7060/api/Appointments"
 let theApp = document.getElementById("theApp")
 
 function handleAppointLoad()
@@ -12,7 +12,7 @@ function handleAppointLoad()
 
 async function getAppointmentData()
 {
-    let response = await fetch(appointmentUrl)
+    let response = await fetch(appointmentUrls)
     let json = await response.json()
     return json
 }
@@ -192,7 +192,7 @@ function addRow(appointment) {
 
     }
     try{
-        var response = fetch(appointmentUrl, {
+        var response = fetch(appointmentUrls, {
             method: "POST",
     body: JSON.stringify(newAppointment),
     headers: {
