@@ -1,5 +1,5 @@
 // Appointment Table Javascript
-const appointmentUrl = "https://localhost:7060/api/Appointments"
+var appointmentUrl = "https://localhost:7060/api/Appointments"
 let theApp = document.getElementById("theApp")
 
 function handleAppointLoad()

@@ -1,5 +1,6 @@
 // Patient Tracking JavaScript
 const patientUrl = "https://localhost:7060/api/Patients"
+const appointmentUrl = "https://localhost:7060/api/Appointments"
 let apps = document.getElementById("apps")
 function handlePTLoad()
 {
@@ -184,15 +185,26 @@ function addRow(patient) {
     let patiPhone = document.getElementById("phone").value
     let patiAddress = document.getElementById("address").value
     let patiMedical = document.getElementById("medical").value
+    let newDay = document.getElementById("day").value
+    let newTimeSlot = document.getElementById("time").value
+    let newService = document.getElementById("service").value
+    let newTherapist = document.getElementById("therapist").value
     const newAppointment =
     {
+        patientID: 1, 
+        apptID: 1,
         email: patiEmail,
         name: patiName,
         phoneNumber: patiPhone,
         address: patiAddress,
-        medicalInfo: patiMedical
+        medicalInfo: patiMedical,
+        dates: newDay,
+        timeSlot: newTimeSlot,
+        servName: newService,
+        theraName: newTherapist
     }
-    var response = fetch(patientUrl, {
+    console.log(newAppointment)
+    var response = fetch(appointmentUrl, {
         method: "POST",
         body: JSON.stringify(newAppointment),
         headers: {
