@@ -203,5 +203,5 @@ function addRow(appointment) {
         console.log("error")
     }
     setTimeout(()=> addRow(response.json),2000) 
-    location.reload()
+    //location.reload()
   }

@@ -44,9 +44,9 @@
         font-size: 18px;
       }
       </style>
-      <form>
+      <form action="${patientUrl}" method="post">
         <div class="instructions">
-          <p>Schedule Appointment Below:</p>
+          <p>Enter Patient Information</p>
         </div>
         <label class="form-label" for="name">Name:</label>
           <input class="form-input" type="text" id="name" name="name" required><br><br>
@@ -63,6 +63,13 @@
           <label class="form-label" for="medical">Medical Info:</label>
           <input class="form-input" type="text" id="medical" name="medical" required><br><br>
 
+          <input type="submit" value="Submit">
+      </form>
+      
+      <form action="${appointmentUrl}" method="post">
+        <div class="instructions">
+          <p>Schedule Appointment Below:</p>
+        </div>
           <label class="form-label" for="day">Day:</label>
           <input class="form-input" type="date" id="day" name="day" required><br><br>
 
@@ -97,6 +104,7 @@
 
           <input type="submit" value="Submit" id = "new-Appointment">
     </form>
+    
         
         <!--------------------------- Nav bar --------------------------->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
