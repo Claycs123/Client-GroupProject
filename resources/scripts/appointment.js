@@ -176,3 +176,32 @@ function addRow(appointment) {
     document.getElementById("theApp").appendChild(table);
     console.log(appointments)
   }
+
+  function handleAppointPost()
+  {
+    let newDay = document.getElementById("day").value
+    let newTimeSlot = document.getElementById("time").value
+    let newService = document.getElementById("service").value
+    let newTherapist = document.getElementById("therapist").value
+
+    const newAppointment = {
+        dates: newDay,
+        timeSlot: newTimeSlot,
+        servName: newService,
+        theraName: newTherapist
+
+    }
+    try{
+        var response = fetch(appointmentUrl, {
+            method: "POST",
+    body: JSON.stringify(newAppointment),
+    headers: {
+    "Content-type": "application/json; charset=UTF-8"
+        },
+        })
+    }catch(Exception){
+        console.log("error")
+    }
+    setTimeout(()=> addRow(response.json),2000) 
+    location.reload()
+  }
