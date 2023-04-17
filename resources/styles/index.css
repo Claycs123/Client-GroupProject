@@ -105,4 +105,25 @@
   background-color: #FBFAF9;
   }
   
+  #patientTable {
+    border-collapse: collapse;
+    width: 96%; /* Adjust as needed */
+    margin: 2% auto 0; /* Center the table and set top margin to 15% */
+  }
+  
+  
+  #patientTable th,
+  #patientTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  #patientTable th {
+    background-color: #212529;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
 
