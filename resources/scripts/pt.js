@@ -54,21 +54,21 @@ function addRow(patient) {
         td6.appendChild(document.createTextNode(`${patient.address}`));
         tr.appendChild(td6);
 
-    // let editButton = document.createElement("button")
-    //     tr.appendChild(editButton)
-    //     editButton.innerHTML = "Edit Song"
-    //     editButton.addEventListener('click', function(){
-    //        // let currentID = song.songID
-    //         let curDate = song.dateAdded
-    //         let favor = song.favorited
-    //         let dele = song.deleted
-    //         let updateTitle = prompt("Title?")
-    //         let updateArtist = prompt("Artist?")
+        let editButton = document.createElement("button")
+        tr.appendChild(editButton)
+        editButton.innerHTML = "Edit Patient"
+        console.log(patient)
+        editButton.addEventListener('click', function(){
+            let newEmail = prompt("Email?")
+            let newName = prompt("Name")
+            let newNumber = prompt("Phone Number")
+            let newMedInfo = prompt("Medical Info?")
+            let newAddress = prompt("Address?")
             
 
-    //         handleEdit(curDate, favor, dele, updateArtist, updateTitle, song.songID)
+            handlePatientEdit(newEmail, newName, newNumber, newMedInfo, newAddress, patient.patientID)
             
-    //     })
+        })
     
   }
 
@@ -115,6 +115,11 @@ function addRow(patient) {
     th6.width = 200;
     th6.appendChild(document.createTextNode("Address"));
     tr.appendChild(th6);
+
+    let th7 = document.createElement("TH");
+    th7.width = 200;
+    th7.appendChild(document.createTextNode("Edit"));
+    tr.appendChild(th7);
   
     patients.forEach((patient) => {
        
@@ -152,22 +157,21 @@ function addRow(patient) {
         td6.appendChild(document.createTextNode(`${patient.address}`));
         tr.appendChild(td6);
 
-        // let editButton = document.createElement("button")
-        // tr.appendChild(editButton)
-        // editButton.innerHTML = "Edit Patient"
-        // console.log(patient)
-        // editButton.addEventListener('click', function(){
-        //    //let currentID = song.songID
-        //     let curDate = song.dateAdded
-        //     let favor = song.favorited
-        //     let dele = song.deleted
-        //     let updateTitle = prompt("Title?")
-        //     let updateArtist = prompt("Artist?")
+        let editButton = document.createElement("button")
+        tr.appendChild(editButton)
+        editButton.innerHTML = "Edit Patient"
+        console.log(patient)
+        editButton.addEventListener('click', function(){
+            let newEmail = prompt("Email?")
+            let newName = prompt("Name")
+            let newNumber = prompt("Phone Number")
+            let newMedInfo = prompt("Medical Info?")
+            let newAddress = prompt("Address?")
             
 
-        //     handleEdit(curDate, favor, dele, updateArtist, updateTitle, song.songID)
+            handlePatientEdit(newEmail, newName, newNumber, newMedInfo, newAddress, patient.patientID)
             
-        // })
+        })
     
         
       }
@@ -214,3 +218,26 @@ function addRow(patient) {
     setTimeout(()=> addRow(response.json),2000)
     location.reload()
   }
+
+  async function handlePatientEdit(newEmail, newName, newNumber, newMedInfo, newAddress, PatientID)
+  {
+    const updatedPatient = {
+      patientID: PatientID,
+      email: newEmail,
+      name: newName,
+      phoneNumber: newNumber,
+      medicalInfo: newMedInfo,
+      address: newAddress
+    }
+    console.log(updatedPatient)
+    console.log(PatientID)
+    await fetch(`${patientUrl}/${PatientID}`,{
+      method: "PUT",
+        body: JSON.stringify(updatedPatient),
+        headers: {
+        "Content-type": "application/json; charset=UTF-8"
+            }
+        });
+        //location.reload()
+    }
+  
