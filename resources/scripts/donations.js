@@ -25,7 +25,7 @@ function handleAddDonation()
         console.log("Donation error")
     }
     setTimeout(()=> addRow(response.json),2000)
-    // location.reload()
+    location.reload()
 }
 
 // const createSong = async (event) => {

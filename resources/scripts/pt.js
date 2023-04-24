@@ -238,6 +238,6 @@ function addRow(patient) {
         "Content-type": "application/json; charset=UTF-8"
             }
         });
-        //location.reload()
+        location.reload()
     }
   
