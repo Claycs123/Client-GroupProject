@@ -47,18 +47,18 @@ function addRow(donation) {
   
         let td2 = document.createElement("TD");
         td2.width = 100;
-        td2.appendChild(document.createTextNode(`${donation.donorname}`));
+        td2.appendChild(document.createTextNode(`${donation.donorName}`));
         tr.appendChild(td2);
   
         let td3 = document.createElement("TD");
         td3.width = 50;
-        td3.appendChild(document.createTextNode(`${donation.theraName}`));
+        td3.appendChild(document.createTextNode(`${donation.moneyDonated}`));
   
         tr.appendChild(td3);
   
         let td4 = document.createElement("TD");
         td4.width = 100;
-        td4.appendChild(document.createTextNode(`${appointment.servName}`));
+        td4.appendChild(document.createTextNode(`${donation.date}`));
         tr.appendChild(td4);
   
         let td5 = document.createElement("TD");
