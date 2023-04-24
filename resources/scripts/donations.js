@@ -2,6 +2,7 @@ const url = "https://localhost:7060/api/Donations";
 
 function handleAddDonation()
 {
+    console.log("hello")
     let donEmail = document.getElementById("email").value
     let donName = document.getElementById("name").value
     let donAmount = document.getElementById("donate-amount").value
@@ -13,6 +14,7 @@ function handleAddDonation()
         donateAmount: donAmount,
         date: dateToday
     }
+    console.log("2")
     try {
         var response = fetch(url, {
             method: "POST",
@@ -21,11 +23,13 @@ function handleAddDonation()
             "Content-type": "application/json; charset=UTF-8"  
             },
         })
+        console.log("4")
     } catch(Exception) {
         console.log("Donation error")
     }
-    setTimeout(()=> addRow(response.json),2000)
-    location.reload()
+    console.log("4")
+    // setTimeout(()=> addRow(response.json),2000)
+    // location.reload()
 }
 
 // const createSong = async (event) => {
