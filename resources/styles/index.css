@@ -57,6 +57,9 @@
 }
 #about-image {
   margin-bottom: 75px;
+  position: absolute;
+  left: 2%;
+  top: 12%;
 }
 
 
