@@ -6,7 +6,8 @@ function handleAddDonation()
     let donEmail = document.getElementById("email").value
     let donName = document.getElementById("name").value
     let donAmount = document.getElementById("donate-amount").value
-    let dateToday = new Date();
+    // let dateToday = new Date();
+    let dateToday = new Date().toISOString()
     const newDonation =
     {
         email: donEmail,
@@ -27,10 +28,51 @@ function handleAddDonation()
     } catch(Exception) {
         console.log("Donation error")
     }
-    console.log("4")
-    // setTimeout(()=> addRow(response.json),2000)
+    console.log(newDonation)
+    setTimeout(()=> addRow(response.json),2000)
     // location.reload()
 }
+
+
+function addRow(donation) {
+    
+    let tableBody = document.getElementById("appointmentTableBody");
+    let tr = document.createElement("TR");
+        tableBody.appendChild(tr);
+  
+        let td1 = document.createElement("TD");
+        td1.width = 200;
+        td1.appendChild(document.createTextNode(`${donation.email}`));
+        tr.appendChild(td1);
+  
+        let td2 = document.createElement("TD");
+        td2.width = 100;
+        td2.appendChild(document.createTextNode(`${donation.donorname}`));
+        tr.appendChild(td2);
+  
+        let td3 = document.createElement("TD");
+        td3.width = 50;
+        td3.appendChild(document.createTextNode(`${donation.theraName}`));
+  
+        tr.appendChild(td3);
+  
+        let td4 = document.createElement("TD");
+        td4.width = 100;
+        td4.appendChild(document.createTextNode(`${appointment.servName}`));
+        tr.appendChild(td4);
+  
+        let td5 = document.createElement("TD");
+        td5.width = 200;
+        td5.appendChild(document.createTextNode(`${appointment.dates}`));
+        tr.appendChild(td5);
+
+        let td6 = document.createElement("TD");
+        td6.width = 200;
+        td6.appendChild(document.createTextNode(`${appointment.timeSlot}`));
+        tr.appendChild(td6);
+    
+  }
+
 
 // const createSong = async (event) => {
 //     event.preventDefault();
