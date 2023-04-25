@@ -17,38 +17,38 @@ async function getDonationData()
     let json = await response.json()
     return json
 }
-// function handleAddDonation()
-// {
-//     console.log("hello")
-//     let donEmail = document.getElementById("email").value
-//     let donName = document.getElementById("name").value
-//     let donAmount = document.getElementById("donateamount").value
-//     let date = new Date();
-//     let dateToday = date.toISOString().slice(0, 10);
-//     const newDonation =
-//     {
-//         email: donEmail,
-//         donorName: donName,
-//         moneyDonated: donAmount,
-//         date: dateToday
-//     }
-//     console.log("2")
-//     try {
-//         var response = fetch(donationUrl, {
-//             method: "POST",
-//             body: JSON.stringify(newDonation),
-//             headers: {
-//             "Content-type": "application/json; charset=UTF-8"  
-//             },
-//         })
-//         console.log("4")
-//     } catch(Exception) {
-//         console.log("Donation error")
-//     }
-//     console.log(newDonation)
-//     setTimeout(()=> addRow(response.json),2000)
-//     // location.reload()
-// }
+function handleAddDonation()
+{
+    console.log("hello")
+    let donEmail = document.getElementById("email").value
+    let donName = document.getElementById("name").value
+    let donAmount = document.getElementById("donateamount").value
+    let date = new Date();
+    let dateToday = date.toISOString().slice(0, 10);
+    const newDonation =
+    {
+        email: donEmail,
+        donorName: donName,
+        moneyDonated: donAmount,
+        date: dateToday
+    }
+    console.log("2")
+    try {
+        var response = fetch(donationUrl, {
+            method: "POST",
+            body: JSON.stringify(newDonation),
+            headers: {
+            "Content-type": "application/json; charset=UTF-8"  
+            },
+        })
+        console.log("4")
+    } catch(Exception) {
+        console.log("Donation error")
+    }
+    console.log(newDonation)
+    setTimeout(()=> addRow(response.json),2000)
+    // location.reload()
+}
 
 
 // function addRow(donation) {
