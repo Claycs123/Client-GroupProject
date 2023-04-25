@@ -19,7 +19,6 @@ function handleAddDonation()
     let donEmail = document.getElementById("email").value
     let donName = document.getElementById("name").value
     let donAmount = document.getElementById("donateamount").value
-   // let dateToday = new Date();
     let date = new Date();
     let dateToday = date.toISOString().slice(0, 10);
     const newDonation =
@@ -128,7 +127,7 @@ function addRow(donation) {
   
         let td3 = document.createElement("TD");
         td3.width = 200;
-        td3.appendChild(document.createTextNode(`${donation.moneyDonated}`));
+        td3.appendChild(document.createTextNode(`$${donation.moneyDonated}`));
   
         tr.appendChild(td3);
   
