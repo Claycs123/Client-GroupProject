@@ -18,14 +18,15 @@ function handleAddDonation()
     console.log("hello")
     let donEmail = document.getElementById("email").value
     let donName = document.getElementById("name").value
-    let donAmount = document.getElementById("donate-amount").value
-    // let dateToday = new Date();
-    let dateToday = new Date().toISOString()
+    let donAmount = document.getElementById("donateamount").value
+   // let dateToday = new Date();
+    let date = new Date();
+    let dateToday = date.toISOString().slice(0, 10);
     const newDonation =
     {
         email: donEmail,
-        name: donName,
-        donateAmount: donAmount,
+        donorName: donName,
+        moneyDonated: donAmount,
         date: dateToday
     }
     console.log("2")

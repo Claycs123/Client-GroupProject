@@ -109,7 +109,8 @@
   }
   
   #patientTable,
-  #appointmentTable {
+  #appointmentTable,
+  #donationTable {
     border-collapse: collapse;
     width: 96%; /* Adjust as needed */
     margin: 2% auto 0; /* Center the table and set top margin to 15% */
@@ -119,7 +120,10 @@
   #patientTable th,
   #patientTable td,
   #appointmentTable th,
-  #appointmentTable td {
+  #appointmentTable td,
+  #donationTable th,
+  #donationTable td
+   {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
@@ -127,7 +131,8 @@
   }
   
   #patientTable th,
-  #appointmentTable th {
+  #appointmentTable th,
+  #donationTable th {
     background-color: steelblue;
     color: black;
     font-family: Georgia, 'Times New Roman', Times, serif;

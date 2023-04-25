@@ -92,9 +92,12 @@
 
         <label class="form-label" for="email">Email:</label>
         <input class="form-input" type="email" id="email" name="email" required><br><br>
+        
+        <label class="form-label" for="donate-amount">Donate Amount:</label>
+        <input class="form-input" type="number" min="0" id="donateamount" name="donateamount" required><br><br>
 
-        <label class="form-label" for="donate-amount">Donation Amount:</label>
-        <input class="form-input" type="number" min="0" value="0" id="donate-amount" name="donate-amount" required><br><br>
+        <!-- <label class="form-label" for="donate-amount">Donation Amount:</label>
+        <input class="form-input" type="number" min="0" value="0" id="donateamount" name="donateamount" required><br><br> -->
 
         <input type="submit" value="Submit" onclick="handleAddDonation()">
     </form>
