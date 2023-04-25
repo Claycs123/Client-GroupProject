@@ -138,6 +138,49 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
   
+  #myChart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    height: 300px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  .donation-bar {
+    width: 20px;
+    margin-right: 10px;
+    background-color: #6ab04c;
+    transition: height 0.5s ease-in-out;
+  }
+  
+  .donation-bar:hover {
+    height: 100%;
+  }
+  
+  .donation-label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .donation-amount {
+    font-size: 18px;
+    font-weight: bold;
+    color: #6ab04c;
+  }
+
+  .table td {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  
+  
+
+  
   
   
 

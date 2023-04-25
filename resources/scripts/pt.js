@@ -79,47 +79,49 @@ function addRow(patient) {
     table.border = "1";
     console.log("hello")
     table.id = "patientTable";
-    let tableBody = document.createElement("TBODY");
-    tableBody.id = "patientTableBody";
-    table.appendChild(tableBody);
-  
-    let tr = document.createElement("TR");
-    tableBody.appendChild(tr);
+    let tableHead = document.createElement("THEAD");
+    table.appendChild(tableHead);
+    let headerRow = document.createElement("TR");
+    tableHead.appendChild(headerRow);
   
     let th1 = document.createElement("TH");
     th1.width = 100;
     th1.appendChild(document.createTextNode("PatientID"));
-    tr.appendChild(th1);
+    headerRow.appendChild(th1);
   
     let th2 = document.createElement("TH");
     th2.width = 200;
     th2.appendChild(document.createTextNode("Email"));
-    tr.appendChild(th2);
+    headerRow.appendChild(th2);
   
     let th3 = document.createElement("TH");
     th3.width = 100;
     th3.appendChild(document.createTextNode("Name"));
-    tr.appendChild(th3);
+    headerRow.appendChild(th3);
   
-      let th4 = document.createElement("TH");
-      th4.width = 200;
-      th4.appendChild(document.createTextNode("Phone Number"));
-      tr.appendChild(th4);
+    let th4 = document.createElement("TH");
+    th4.width = 200;
+    th4.appendChild(document.createTextNode("Phone Number"));
+    headerRow.appendChild(th4);
   
     let th5 = document.createElement("TH");
     th5.width = 200;
     th5.appendChild(document.createTextNode("Medical Info"));
-    tr.appendChild(th5);
-
+    headerRow.appendChild(th5);
+  
     let th6 = document.createElement("TH");
     th6.width = 200;
     th6.appendChild(document.createTextNode("Address"));
-    tr.appendChild(th6);
-
+    headerRow.appendChild(th6);
+  
     let th7 = document.createElement("TH");
     th7.width = 200;
     th7.appendChild(document.createTextNode("Edit"));
-    tr.appendChild(th7);
+    headerRow.appendChild(th7);
+  
+    let tableBody = document.createElement("TBODY");
+    tableBody.id = "patientTableBody";
+    table.appendChild(tableBody);
   
     patients.forEach((patient) => {
        
@@ -241,3 +243,5 @@ function addRow(patient) {
         location.reload()
     }
   
+
+    
