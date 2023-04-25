@@ -1,10 +1,14 @@
+
+
+
 const donationUrl = "https://localhost:7060/api/Donations";
+
 
 function handleDonationLoad()
 {
     getDonationData()
     createDonationTable()
-
+    createDonationChart()
 }
 
 async function getDonationData()
@@ -143,6 +147,46 @@ function addRow(donation) {
     document.getElementById("appin").appendChild(table);
     console.log(donations)
   }
+
+  
+
+
+
+  async function createDonationChart() {
+    const donations = await getDonationData() || [];
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const data = new Array(12).fill(0);
+    
+    // Loop through donations and add the donation amount to the corresponding month
+    donations.forEach(donation => {
+        const date = new Date(donation.date);
+        const month = date.getMonth();
+        data[month] += parseInt(donation.moneyDonated);
+    });
+
+    // Create the chart
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: months,
+            datasets: [{
+                label: 'Donations',
+                data: data,
+                borderColor: 'rgb(10, 120, 3000)',
+                tension: 0.1
+            }]
+        }
+    });
+}
+
+  
+
+
+
+
+
+
 
 // const createSong = async (event) => {
 //     event.preventDefault();
