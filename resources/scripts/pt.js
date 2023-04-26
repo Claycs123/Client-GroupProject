@@ -218,7 +218,7 @@ function addRow(patient) {
         },
     })
     setTimeout(()=> addRow(response.json),2000)
-    location.reload()
+    //location.reload()
   }
 
   async function handlePatientEdit(newEmail, newName, newNumber, newMedInfo, newAddress, PatientID)
